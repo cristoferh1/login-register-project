@@ -5,9 +5,9 @@ import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
-    AuthModule,
     ConfigModule.forRoot(),//para usar variables env
     MongooseModule.forRoot(process.env.MONGO_URI),//url mongodb
+    AuthModule,
   ],
   controllers: [],
   providers: [],
